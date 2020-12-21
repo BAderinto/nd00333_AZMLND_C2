@@ -59,7 +59,7 @@ The automated machine learning experiment used for this project was created in A
 
 ![registered dataset](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/registered_datasets.png)
 
-![registered dataset](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/experiment_completed.PNG)
+![registered dataset](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/experiment_completed.png)
 
 ![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/best_model.png)
 
