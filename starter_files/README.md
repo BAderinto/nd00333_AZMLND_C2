@@ -103,7 +103,7 @@ docker run -p 80:8080 swaggerapi/swagger-ui
 
 After executing the command line, Swagger is now running on port 80.
 
-[swagger ui](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/swagger_ui.png)
+![swagger ui](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/swagger_ui.png)
 
 b. running [serve.py script](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/swagger/serve.py) starts a Python server on port 8000 because it is required as input in the Swagger UI page. This script runs by making reference to the downloaded swagger.json file of the deployed model endpoint which must be in the same folder as the python script.
 
