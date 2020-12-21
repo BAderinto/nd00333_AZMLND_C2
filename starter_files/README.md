@@ -150,7 +150,7 @@ This part of the project was completed using the Jupyter Notebook, [aml-pipeline
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
 Although this project did not utilize the full capabilities of pipelines other than training the model, I look forward to using pipelines to perform automation which combines several other tasks, or steps like:
 
-Data Preparation
-Validation
-Deployment
-Combined tasks
+* Data Preparation
+* Validation
+* Deployment
+* Combined tasks
