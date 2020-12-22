@@ -66,13 +66,12 @@ The automated machine learning experiment used for this project was created in A
 3. Deploy the best model
 At this stage, the experiment run has been completed and a summary of all the models and their metrics are shown as well as their explanations. 
 
-![registered dataset](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/registered_datasets.png)
+![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/best_model_first.png)
 
 The Best Model is shown in the Details tab while it appears first in the Models tab at the top. 
 
 ![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/best_model.png)
 
-![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/best_model_first.png)
 
 The best model is deployed which is allowed to interact with the HTTP API service and interact with the model by sending data over POST requests.
 
