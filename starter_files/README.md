@@ -12,6 +12,12 @@ This project involves working with the Bank Marketing dataset on Azure to:
 ## Architectural Diagram
 *TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
 
+1. AutoML Studio
+![az ml extension](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/project2.png)
+
+2. Create, Publish and Consume Pipeline
+
+![az ml extension](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/pipeline.png)
 
 
 ## Key Steps
