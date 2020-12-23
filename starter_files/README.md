@@ -149,13 +149,17 @@ This part of the project was completed using the Jupyter Notebook, [aml-pipeline
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-[screen recording](https://youtu.be/rwwZotqhCl0)
+[screen recording](https://youtu.be/YL-nAzsrLVU)
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
 Although this project did not utilize the full capabilities of pipelines other than training the model, I look forward to using pipelines to perform automation which combines several other tasks, or steps like:
+*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+Although this project did not utilize the full capabilities of pipelines other than training the model, I look forward to using pipelines to perform automation which combines several other tasks, or steps like:
 
-* Data Preparation
-* Validation
-* Deployment
-* Combined tasks
+1. With reference to this project, the pipeline capabilities in data preparation could be better used in validating and cleaning, munging and transformation, normalization, and staging of the dataset used for training the model.
+
+2. Also the training process could be more effecient by including parameterizing arguments, filepaths, and logging / reporting configurations. Efficiency might come from specifying specific data subsets, different hardware compute resources, distributed processing, and progress monitoring.
+
+3. The training iteration process can be improved through fine-tuning around the training loop of the pipeline. That is, when the pipeline is rerun, the run jumps to the steps that need to be rerun in this case, an updated training script while steps that do not need to be rerun are skipped.
+
