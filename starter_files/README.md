@@ -149,7 +149,7 @@ This part of the project was completed using the Jupyter Notebook, [aml-pipeline
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-[screen recording](https://youtu.be/YL-nAzsrLVU)
+[screen recording](https://youtu.be/-8RkE6V1s7M)
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
