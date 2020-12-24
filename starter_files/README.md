@@ -132,17 +132,17 @@ The [endpoint.py script](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/mas
 
 This part of the project was completed using the Jupyter Notebook, [aml-pipelines-with-automated-machine-learning-step](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/aml-pipelines-with-automated-machine-learning-step.ipynb) provided in the starter files. The notebook was updated to have the same keys, URI, dataset, cluster, and model names already created. 
 
-![pipeline created](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/pipeline_created.png)
+![pipeline created](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/pipeline-runs.png)
 
-![pipeline endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/pipeline_endpoint.png)
+![pipeline endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/pipeline-endpoint-bankmarketing-train.png)
 
-![Bankmarketing dataset](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/Bankmarketing_dataset.png)
+![Published Pipeline Overview 1](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/published-pipeline-overview-1.png)
 
-![pipeline run overview](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/pipeline_run_overview.png)
+![Published Pipeline Overview 2](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/published-pipeline-overview-2.png)
 
-![use rundetails widget](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/rundetails_widget_1.png)
+![Published Pipeline Overview 3](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/published-pipeline-overview-3.png)
 
-![use rundetails widget](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/rundetails_widget_2.png)
+![Published Pipeline Overview 4](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/published-pipeline-overview-4.png)
 
 ![scheduled run](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/pipeline_created.png)
 
