@@ -144,8 +144,6 @@ This part of the project was completed using the Jupyter Notebook, [aml-pipeline
 
 ![Published Pipeline Overview 4](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/published-pipeline-overview-4.png)
 
-![scheduled run](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/pipeline_created.png)
-
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
