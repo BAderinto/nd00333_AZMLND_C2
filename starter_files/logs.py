@@ -9,6 +9,11 @@ name = "bankmarketing-model-02"
 
 # load existing web service
 service = Webservice(name=name, workspace=ws)
+
+
+#enable application insights
+service.update(enable_app_insights = True)
+
 logs = service.get_logs()
 
 for line in logs.split('\n'):
