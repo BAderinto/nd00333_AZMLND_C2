@@ -159,7 +159,7 @@ This part of the project was completed using the Jupyter Notebook, [aml-pipeline
 
 
 ## Screen Recording
-[screen recording](https://youtu.be/-8RkE6V1s7M)
+[screen recording](https://youtu.be/0Dt-bE0v8PA)
 
 ## Standout Suggestions
 1. With reference to this project, the pipeline capabilities in data preparation could be better used in validating and cleaning, munging and transformation, normalization, and staging of the dataset used for training the model.
