@@ -1,6 +1,3 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
-
-
 # Operationalizing Machine Learning
 
 This project involves working with the Bank Marketing dataset on Azure to:
@@ -10,8 +7,6 @@ This project involves working with the Bank Marketing dataset on Azure to:
 4. Document all steps taken in a README file and a screencast video.
 
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
-
 1. AutoML Studio
 ![az ml extension](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/project2.png)
 
@@ -21,9 +16,6 @@ This project involves working with the Bank Marketing dataset on Azure to:
 
 
 ## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
-The following steps were taken to complete the project as required
-
 1. Authentication
 Authentication for this project was achieved using the login credentials provided on the Udacity Project 2 Lab outside the virtual lab on portal.azure.com through a web browser and on the Git Bash terminal. 
 
@@ -63,36 +55,54 @@ $ az ml workspace share -w udacity-project-workspace -g udacity-rg --user 65d275
 2. Automated ML Experiment
 The automated machine learning experiment used for this project was created in Azure ML studio and a compute cluster is configured to run the experiment using the [bank marketing dataset](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv)
 
-![registered dataset](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/registered_datasets.png)
+### Registered dataset
+Bankmarketing dataset from the Datasets section available in the lab environment used for running the automl experiment created in the ML studio.
+![registered dataset](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/registered_dataset.png)
 
-![registered dataset](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/experiment_completed.png)
+### Completed Automated ML Experiment
+A new Automated ML run was created in ML Studio using the available Bankmarketing dataset, with an Automated ML experiment in a configured compute cluster(VM Size – Standard_DS2_V2, number of minimum nodes = 1, number of maximum nodes = 5, Exit criterion defaults to 1, Concurrency defaults to 5). The experiment was completed as shown below.
+![completed experiment](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/automl-experiment-completed.png)
 
-![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/best_model.png)
+### Models from the Automated ML Experiment
+Below is a screenshot of all models involved in the Automated ML run with the best model, VotingEnsemble, coming first at the top.
+![all models](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/all-models.png)
+
+### Best Model from the Automated ML Experiment
+![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/best-model.png)
 
 3. Deploy the best model
 At this stage, the experiment run has been completed and a summary of all the models and their metrics are shown as well as their explanations. 
 
-![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/best_model_first.png)
+![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/all-models.png)
 
 The Best Model is shown in the Details tab while it appears first in the Models tab at the top. 
 
-![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/best_model.png)
+![best model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/all-models.png)
 
 
 The best model is deployed which is allowed to interact with the HTTP API service and interact with the model by sending data over POST requests.
 
-![deployed model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/deployed_model_app_i_false.png)
-
+![deployed model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/healthy-deployed-model-1.png)
+![deployed model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/healthy-deployed-model-2.png)
 
 4. Enable logging
 
 Application Insights is enabled on the deployed best Model and now logs can be retrieved. Although this feature is configurable at deploy time with a check-box, this is achieved in this experiment by running the [logs python script](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/logs.py). 
 
-![logs showing by running provided logs.py script](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/logs_by_logs_python_script_1.png)
+### logs.py script edited and updated
+The logs.py script was updated  by assigning the deployed model’s name to the “name” variable and adding the line of code below to enable the application insights:
+`service.update(enable_app_insights = True)` 
 
-![logs showing by running provided logs.py script](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/logs_by_logs_python_script_2.png)
+![logs.py script updated](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/logs-py-updated-1.png)
 
-![application insights enabled on deployed model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/deployed_model.png)
+![logs.py script updated](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/logs-py-updated-3.png)
+
+### logs.py script enable application insights on deployed model endpoint
+To achieve enabling the “Application Insights Enabled” by running the logs.py script, we need to download the config.json file for Azure portal and place it in the same folder as the script. This provides information on the subscription id, resource group and the workspace name which used in script file. 
+![logs.py script enable application insights](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/logs-enabled-1.png)
+
+![application insights enabled on deployed model](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/logs-enabled-2.png)
+![logs.py script updated](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/app-insights-enabled.png)
 
 5. Swagger Documentation
 
@@ -112,30 +122,35 @@ After executing the command line, Swagger is now running on port 80.
 
 b. running [serve.py script](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/swagger/serve.py) starts a Python server on port 8000 because it is required as input in the Swagger UI page. This script runs by making reference to the downloaded swagger.json file of the deployed model endpoint which must be in the same folder as the python script.
 
-![swagger ui](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/swagger_ui.png)
+![swagger ui](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/swaggerserve.png)
 
-![swagger ui](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/bm_swagger_1.png)
+![swagger container](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/swagger-container.png)
 
-![swagger ui](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/bm_swagger_2.png)
-
-![swagger ui](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/bm_swagger_3.png)
-
-![swagger ui](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/bm_swagger_4.png)
+![swagger bankmarketting-model-02](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Swagger_Doc/swagger-bankmarketting-model-02.png)
 
 6. Consume model endpoints
 
 The [endpoint.py script](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/endpoint.py) provided is used to interact with the deployed model in the Endpoints section. The endpoint.py script is updated by modifying both the scoring_uri and the key to match the key and the URI that was generated after deployment. The value for the URI and the key can be found in the Consume tab of the deployed model in the Endpoints section.
 
-![json output](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Consume_Model/json_output.png)
+### Running endpoint.py script
+![endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Consume_Model/endpoint-benchmark-1.png)
+![endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Consume_Model/endpoint-benchmark-2.png)
+![endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Consume_Model/endpoint-benchmark-3.png)
+
+### data saved as json file
+![data.json output saved](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Consume_Model/data-json-saved.png)
 
 7. Create and publish a pipeline
 
 This part of the project was completed using the Jupyter Notebook, [aml-pipelines-with-automated-machine-learning-step](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/aml-pipelines-with-automated-machine-learning-step.ipynb) provided in the starter files. The notebook was updated to have the same keys, URI, dataset, cluster, and model names already created. 
 
+### Pipeline Runs
 ![pipeline created](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/pipeline-runs.png)
 
+### Bankmarketing Train Pipeline Endpoint
 ![pipeline endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/pipeline-endpoint-bankmarketing-train.png)
 
+### Published Pipeline Overview
 ![Published Pipeline Overview 1](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/published-pipeline-overview-1.png)
 
 ![Published Pipeline Overview 2](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Pipeline/published-pipeline-overview-2.png)
@@ -146,15 +161,9 @@ This part of the project was completed using the Jupyter Notebook, [aml-pipeline
 
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 [screen recording](https://youtu.be/-8RkE6V1s7M)
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
-Although this project did not utilize the full capabilities of pipelines other than training the model, I look forward to using pipelines to perform automation which combines several other tasks, or steps like:
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
-Although this project did not utilize the full capabilities of pipelines other than training the model, I look forward to using pipelines to perform automation which combines several other tasks, or steps like:
-
 1. With reference to this project, the pipeline capabilities in data preparation could be better used in validating and cleaning, munging and transformation, normalization, and staging of the dataset used for training the model.
 
 2. Also the training process could be more effecient by including parameterizing arguments, filepaths, and logging / reporting configurations. Efficiency might come from specifying specific data subsets, different hardware compute resources, distributed processing, and progress monitoring.
