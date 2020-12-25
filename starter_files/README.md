@@ -131,12 +131,12 @@ b. running [serve.py script](https://github.com/BAderinto/nd00333_AZMLND_C2/blob
 The [endpoint.py script](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/endpoint.py) provided is used to interact with the deployed model in the Endpoints section. The endpoint.py script is updated by modifying both the scoring_uri and the key to match the key and the URI that was generated after deployment. The value for the URI and the key can be found in the Consume tab of the deployed model in the Endpoints section.
 
 ### Running endpoint.py script
-![endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Consume_Model/endpoint-benchmark-1.png)
-![endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Consume_Model/endpoint-benchmark-2.png)
-![endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Consume_Model/endpoint-benchmark-3.png)
+![endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/endpoint-benchmark-1.png)
+![endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/endpoint-benchmark-2.png)
+![endpoint](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/endpoint-benchmark-3.png)
 
 ### data saved as json file
-![data.json output saved](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Consume_Model/data-json-saved.png)
+![data.json output saved](https://github.com/BAderinto/nd00333_AZMLND_C2/blob/master/starter_files/Deploy_Model/data-json-saved.png)
 
 7. Create and publish a pipeline
 
